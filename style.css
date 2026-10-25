@@ -1,0 +1,168 @@
+* style.css */
+ 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+ 
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4f4f4;
+  color: #222;
+  line-height: 1.5;
+}
+ 
+header {
+  background-color: #2c3e50;
+  color: white;
+  padding: 24px 16px;
+  text-align: center;
+}
+ 
+header h1 {
+  margin: 0 0 8px 0;
+}
+ 
+header p {
+  margin: 0;
+}
+ 
+main {
+  max-width: 700px;
+  margin: 32px auto;
+  padding: 0 16px;
+}
+ 
+main section {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+  margin-bottom: 24px;
+}
+ 
+footer {
+  text-align: center;
+  padding: 16px;
+  color: #666;
+  font-size: 0.9rem;
+}
+ 
+/* Form: fields stacked vertically */
+#note-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+ 
+label {
+  font-weight: bold;
+}
+ 
+input,
+textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+ 
+button {
+  align-self: flex-start;
+  padding: 8px 16px;
+  background-color: #2c3e50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+ 
+button:hover:not(:disabled) {
+  background-color: #1a252f;
+}
+ 
+/* Buttons look switched off while a request is running */
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+ 
+/* Status messages: a different look for loading, success and error */
+#status {
+  margin: 12px 0 0 0;
+  padding: 0;
+  min-height: 1.5em;
+}
+ 
+.status-loading {
+  color: #555;
+  font-style: italic;
+}
+ 
+.status-success {
+  color: #1e7e34;
+  background-color: #e6f4ea;
+  border-left: 4px solid #1e7e34;
+  padding: 8px 12px;
+}
+ 
+.status-error {
+  color: #b02a37;
+  background-color: #fdecea;
+  border-left: 4px solid #b02a37;
+  padding: 8px 12px;
+}
+ 
+/* Notes list */
+#notes-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+ 
+.note-card {
+  padding: 12px 16px;
+  border: 1px solid #e0e0e0;
+  border-left: 6px solid #2c3e50;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+ 
+.note-card h3 {
+  margin: 0 0 4px 0;
+}
+ 
+.note-card p {
+  margin: 0 0 8px 0;
+}
+ 
+.delete-btn {
+  background-color: #c0392b;
+}
+ 
+.delete-btn:hover:not(:disabled) {
+  background-color: #922b21;
+}
+ 
+.empty-state {
+  color: #666;
+  font-style: italic;
+}
+ 
+/* Small screens */
+@media (max-width: 600px) {
+  header {
+    padding: 16px 8px;
+  }
+ 
+  main {
+    margin: 16px auto;
+  }
+ 
+  main section {
+    padding: 16px;
+  }
+}
+ 
